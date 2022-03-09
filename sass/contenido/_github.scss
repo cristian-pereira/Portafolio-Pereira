@@ -1,0 +1,14 @@
+.perfil {
+    margin: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+@media (max-width: 480px) {
+    .perfil{
+        flex-direction: column;
+    }
+}
+.perfil #perfil {
+    border-radius: 50%;
+    width: 20rem;
+}

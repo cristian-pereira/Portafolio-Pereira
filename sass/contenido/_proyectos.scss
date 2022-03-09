@@ -1,0 +1,94 @@
+@import "variables";
+
+.proyectos {
+    padding: 2rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+    &__contenedor {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    @media (max-width: 768px) {
+        &__contenedor {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        &__contenedor {
+            grid-template-columns: 1fr;
+        }
+    }
+    .img {
+        height: 100%;
+    }
+    &__boton {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .btn--proyecto{
+        transition: all ease .5s;
+    }
+    .btn--proyecto:hover {
+        transform: scale(1.1);
+    }
+}
+.proyecto{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    &__cuerpo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            top: -5rem;
+            margin-bottom: .5rem;
+        }
+        p {
+            top: 5rem;
+        }
+        h3, p{
+            position: relative;
+            opacity: 0;
+        }
+        &, h3, p, .btn--proyecto{
+            transition: all ease .5s;
+        }
+    }
+    &:hover>&__cuerpo{
+        background-color: $rosadoTransparente;
+
+        h3, p{
+            top: 0;
+            opacity: 1;
+        }
+    }
+    .img{
+        transition: all ease .5s;
+    }
+    &:hover img{
+        transform: scale(1.1);
+    }
+    
+}
+
+
+

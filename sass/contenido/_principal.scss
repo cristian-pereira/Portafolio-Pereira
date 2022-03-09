@@ -1,0 +1,71 @@
+@import "variables";
+
+.principal {
+    position: relative;
+
+    &__imagen {
+        display: flex;
+        justify-content: center;
+
+        .img {
+            width: 15rem;
+            border-radius: 50%;
+            border: .1rem solid $blanco;
+            padding: .2rem;
+            position: absolute;
+            top: -10rem;
+            z-index: 10;
+        }
+    }
+    .principal__lenguajes {
+        background-color: $intermedio;
+        padding: 2rem 0;
+
+        &--index{
+            @extend .principal__lenguajes;
+            margin-top: 10rem;
+        }
+        h2 {
+            margin-bottom: 3rem;
+        }
+        .contenedor {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .img {
+            max-width: 6rem;
+        }
+    }
+    &__informacion {
+        background-color: $morado;
+
+        h2 {
+            padding-top: 5rem;
+        }
+    }
+    &__informe {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 4rem 0;
+
+        img {
+            height: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        &__informe {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .principal__parrafo {
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
