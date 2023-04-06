@@ -1,4 +1,4 @@
-@import "variables";
+@use 'base/variables' as v;
 
 .proyectos {
     padding: 2rem;
@@ -74,7 +74,7 @@
         }
     }
     &:hover>&__cuerpo{
-        background-color: $rosadoTransparente;
+        background-color: v.$rosadoTransparente;
 
         h3, p{
             top: 0;

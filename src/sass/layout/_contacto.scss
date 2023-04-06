@@ -1,5 +1,4 @@
-@import "variables";
-
+@use 'base/variables' as v;
 .contacto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

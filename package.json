@@ -1,17 +1,30 @@
 {
   "name": "portafolio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss sass/main.scss css/estilos.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "dev": "gulp dev"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
-  }
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.15",
+    "gulp": "^4.0.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilo51/Portafolio-Pereira.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camilo51/Portafolio-Pereira/issues"
+  },
+  "homepage": "https://github.com/camilo51/Portafolio-Pereira#readme",
+  "description": ""
 }
